@@ -16,6 +16,7 @@ public class stockService {
         stock.decrease(quantity);
         stockRepository.saveAndFlush(stock);
         //Test에서 assertEquals(expected,값) 이렇게 해서 검증을 진행해볼수 있습니다.
+        //물론 dirty checking을 이용할수도 있습니다.
     }
 
     //자바에서 제공해주는것으로, synchronized를 이용하면, 손쉽게 한개의 스레드만 접근하도록 할수 있습니다.
