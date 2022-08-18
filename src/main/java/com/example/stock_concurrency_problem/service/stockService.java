@@ -40,4 +40,12 @@ public class stockService {
     * synchronized는 각 프로세스 안에서만 보장이되기때문에 결국 여러 쓰레드에서 동시적으로 데이터에 접근을 할수있어서 race condition 발생.
     * 실제 운영중인 서비스는 대개 2대이상의 서버를 사용합니다 -> 그래서 synchronized를 사용하지 않습니다.
     * */
+
+    @Transactional
+    public void decrease_pess(Long id,Long quantity){
+        Stock stock = stockRepository.findByIdWithPessimisticLock(id);
+        stock.decrease(quantity);
+        stockRepository.saveAndFlush(stock);
+        //하나의 트랜잭션 내에서 독점으로 사용.
+    }
 }
