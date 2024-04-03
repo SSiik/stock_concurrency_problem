@@ -23,26 +23,17 @@
 
 <br>
 
-## 기술 스택
+## 사용 기술 스택
 
-| SpringBoot | MySQL |  Spring data JPA   |  PostMan   |  |
-| :--------: | :--------: | :--------: | :--------: | :--------: |
-|   ![sb]    |   ![my]    |   ![dj]    |   ![pos]    |       |
-
-<br>
-
-## 구현 기능
-
-### 
+### Spring Boot
+### Spring data JPA ( JpaRepository )
+### Redis ( RedisTemplate )
 
 <br>
 
-## 배운 점.
-
-  
-<br>
 
 <br>
+
 
 ## 라이센스
 
